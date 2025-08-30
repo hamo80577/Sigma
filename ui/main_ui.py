@@ -197,9 +197,16 @@ class MainUI(tk.Tk):
                 messagebox.showerror("Drive auth", f"Failed to authenticate to Drive: {e}")
                 return
 
-            w = watcher_module.Watcher()
+            sftp_conf = {
+                "host": self.sftp_host_var.get().strip(),
+                "port": int(self.sftp_port_var.get() or 22),
+                "username": self.sftp_user_var.get().strip(),
+                "password": self.sftp_pass_var.get().strip() or None,
+                "key_file": self.sftp_key_var.get().strip() or None,
+            }
+            w = watcher_module.Watcher(sftp_conf=sftp_conf)
             w.drive_service = svc  # override service object
-            w.run_once()
+            w.run_once(drive_folder_id=self.drive_folder_id_var.get().strip())
             LOGGER.info("[UI] Single run finished.")
         except Exception as e:
             LOGGER.exception("Run once failed: %s", e)
@@ -218,7 +225,14 @@ class MainUI(tk.Tk):
             messagebox.showerror("Drive auth", f"Failed to authenticate to Drive: {e}")
             return
 
-        self.bg_watcher = watcher_module.Watcher()
+        sftp_conf = {
+            "host": self.sftp_host_var.get().strip(),
+            "port": int(self.sftp_port_var.get() or 22),
+            "username": self.sftp_user_var.get().strip(),
+            "password": self.sftp_pass_var.get().strip() or None,
+            "key_file": self.sftp_key_var.get().strip() or None,
+        }
+        self.bg_watcher = watcher_module.Watcher(sftp_conf=sftp_conf)
         self.bg_watcher.drive_service = svc  # override default auth
 
         self.stop_event = threading.Event()
@@ -230,7 +244,7 @@ class MainUI(tk.Tk):
             poll = getattr(settings, "POLL_INTERVAL", 30)
             while not self.stop_event.is_set():
                 try:
-                    self.bg_watcher.run_once()
+                    self.bg_watcher.run_once(drive_folder_id=self.drive_folder_id_var.get().strip())
                 except Exception:
                     LOGGER.exception("Background watcher run_once error")
                 # sleep in small steps so we can stop quickly
