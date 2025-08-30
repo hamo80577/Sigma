@@ -1,0 +1,518 @@
+2025-08-30 21:21:45,515 [INFO] [UI] New profile fields cleared.
+2025-08-30 21:23:00,306 [INFO] Found 0 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:23:03,913 [INFO] [UI] Drive test OK. Items in folder: 0
+2025-08-30 21:24:16,823 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 21:24:17,213 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 21:24:18,448 [INFO] Authentication (password) successful!
+2025-08-30 21:24:18,834 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 21:24:18,857 [INFO] SFTP: connected.
+2025-08-30 21:24:18,936 [INFO] [chan 0] sftp session closed.
+2025-08-30 21:24:18,957 [INFO] SFTP: disconnected.
+2025-08-30 21:24:20,647 [INFO] [UI] SFTP connection OK.
+2025-08-30 21:24:29,097 [INFO] [UI] Profile 'hamo' loaded.
+2025-08-30 21:24:29,154 [INFO] [UI] Profile 'hamo' saved.
+2025-08-30 21:24:50,024 [INFO] [UI] Watcher started.
+2025-08-30 21:24:50,093 [INFO] Watcher: loop started.
+2025-08-30 21:24:50,096 [INFO] Watcher: checking Drive for new files...
+2025-08-30 21:24:50,096 [INFO] [UI] status: connecting
+2025-08-30 21:24:50,113 [INFO] [UI] status: watching
+2025-08-30 21:24:51,156 [INFO] [UI] Stop requested.
+2025-08-30 21:24:52,267 [INFO] Found 0 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:24:52,268 [INFO] Watcher: no new files.
+2025-08-30 21:24:52,270 [INFO] Watcher: stop requested. exiting loop.
+2025-08-30 21:24:52,270 [INFO] Watcher: loop stopped.
+2025-08-30 21:29:17,127 [INFO] [UI] Profile 'hamo' loaded.
+2025-08-30 21:29:23,466 [INFO] Found 0 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:29:27,954 [INFO] [UI] Drive test OK. Items in folder: 0
+2025-08-30 21:29:31,016 [INFO] Watcher: checking Drive for new files...
+2025-08-30 21:29:33,211 [INFO] Found 0 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:29:33,214 [INFO] Watcher: no new files.
+2025-08-30 21:29:33,217 [INFO] [UI] Single run finished.
+2025-08-30 21:29:38,361 [INFO] [UI] Watcher started.
+2025-08-30 21:29:38,483 [INFO] Watcher: loop started.
+2025-08-30 21:29:38,487 [INFO] Watcher: checking Drive for new files...
+2025-08-30 21:29:38,488 [INFO] [UI] status: connecting
+2025-08-30 21:29:38,513 [INFO] [UI] status: watching
+2025-08-30 21:29:40,771 [INFO] Found 0 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:29:40,773 [INFO] Watcher: no new files.
+2025-08-30 21:30:10,805 [INFO] Watcher: checking Drive for new files...
+2025-08-30 21:30:11,125 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:30:11,134 [INFO] Downloading 'Haj_518559.csv' (id=1HzEs5js2jmqR_HPyyj7Jrf0oMxhQ3L6V, mime=text/csv) -> C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 21:30:12,399 [INFO] Downloaded 'Haj_518559.csv' -> C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 21:30:12,403 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 21:30:12,672 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 21:30:13,538 [INFO] Authentication (password) successful!
+2025-08-30 21:30:13,903 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 21:30:13,905 [INFO] SFTP: connected.
+2025-08-30 21:30:13,961 [INFO] SFTP: uploading C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv -> /catalog/Haj_518559.csv
+2025-08-30 21:30:14,582 [ERROR] Upload failed for Haj_518559.csv: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 137, in run_once
+    sftp.upload(local_path, remote_dir=remote_dir)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 64, in upload
+    self._sftp.put(local_path, remote_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 759, in put
+    return self.putfo(fl, remotepath, file_size, callback, confirm)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 714, in putfo
+    with self.file(remotepath, "wb") as fr:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 372, in open
+    t, msg = self._request(CMD_OPEN, filename, imode, attrblock)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 21:30:14,644 [INFO] [chan 0] sftp session closed.
+2025-08-30 21:30:14,680 [INFO] SFTP: disconnected.
+2025-08-30 21:30:44,703 [INFO] Watcher: checking Drive for new files...
+2025-08-30 21:30:45,080 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:30:45,092 [INFO] Downloading 'Haj_518559.csv' (id=1HzEs5js2jmqR_HPyyj7Jrf0oMxhQ3L6V, mime=text/csv) -> C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 21:30:46,109 [INFO] Downloaded 'Haj_518559.csv' -> C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 21:30:46,117 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 21:30:46,304 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 21:30:46,554 [INFO] [UI] Stop requested.
+2025-08-30 21:30:47,128 [INFO] Authentication (password) successful!
+2025-08-30 21:30:47,495 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 21:30:47,497 [INFO] SFTP: connected.
+2025-08-30 21:30:47,555 [INFO] SFTP: uploading C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv -> /catalog/Haj_518559.csv
+2025-08-30 21:30:48,187 [ERROR] Upload failed for Haj_518559.csv: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 137, in run_once
+    sftp.upload(local_path, remote_dir=remote_dir)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 64, in upload
+    self._sftp.put(local_path, remote_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 759, in put
+    return self.putfo(fl, remotepath, file_size, callback, confirm)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 714, in putfo
+    with self.file(remotepath, "wb") as fr:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 372, in open
+    t, msg = self._request(CMD_OPEN, filename, imode, attrblock)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 21:30:48,228 [INFO] [chan 0] sftp session closed.
+2025-08-30 21:30:48,243 [INFO] SFTP: disconnected.
+2025-08-30 21:30:48,245 [INFO] Watcher: stop requested. exiting loop.
+2025-08-30 21:30:48,252 [INFO] Watcher: loop stopped.
+2025-08-30 21:46:39,353 [INFO] [UI] Profile 'hamo' loaded.
+2025-08-30 21:46:44,003 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 21:46:44,331 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 21:46:45,124 [INFO] Authentication (password) successful!
+2025-08-30 21:46:45,488 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 21:46:45,513 [INFO] SFTP: connected.
+2025-08-30 21:46:45,548 [ERROR] SFTP test failed: 'SFTPClient' object has no attribute 'auto_remote_dir'
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\qt_main.py", line 291, in _test_sftp
+    auto_dir = client.auto_remote_dir()
+               ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SFTPClient' object has no attribute 'auto_remote_dir'. Did you mean: 'ensure_remote_dir'?
+2025-08-30 21:47:04,750 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:47:06,634 [INFO] [UI] Drive test OK. Items in folder: 1
+2025-08-30 21:47:08,453 [INFO] Watcher: checking Drive for new files...
+2025-08-30 21:47:10,690 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 21:47:10,697 [INFO] Downloading 'Haj_518559.csv' (id=1HzEs5js2jmqR_HPyyj7Jrf0oMxhQ3L6V, mime=text/csv) -> c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 21:47:12,126 [INFO] Downloaded 'Haj_518559.csv' -> c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 21:47:12,130 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 21:47:12,335 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 21:47:13,147 [INFO] Authentication (password) successful!
+2025-08-30 21:47:13,541 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 21:47:13,544 [INFO] SFTP: connected.
+2025-08-30 21:47:13,602 [INFO] SFTP: uploading c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv -> /upload/Haj_518559.csv
+2025-08-30 21:47:14,190 [ERROR] Upload failed for Haj_518559.csv: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 137, in run_once
+    sftp.upload(local_path, remote_dir=remote_dir)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 64, in upload
+    self._sftp.put(local_path, remote_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 759, in put
+    return self.putfo(fl, remotepath, file_size, callback, confirm)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 714, in putfo
+    with self.file(remotepath, "wb") as fr:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 372, in open
+    t, msg = self._request(CMD_OPEN, filename, imode, attrblock)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 21:47:14,223 [INFO] [chan 0] sftp session closed.
+2025-08-30 21:47:14,275 [INFO] SFTP: disconnected.
+2025-08-30 21:47:14,286 [INFO] [UI] Single run finished.
+2025-08-30 22:07:19,126 [INFO] [UI] Profile 'hamo' loaded.
+2025-08-30 22:07:24,450 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 22:07:26,144 [INFO] [UI] Drive test OK. Items in folder: 1
+2025-08-30 22:07:29,145 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 22:07:29,463 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 22:07:30,201 [INFO] Authentication (password) successful!
+2025-08-30 22:07:30,562 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 22:07:30,615 [INFO] SFTP: connected.
+2025-08-30 22:07:30,619 [INFO] SFTP: home = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21
+2025-08-30 22:07:30,914 [INFO] SFTP: home listing = ['assortment', 'promotions', 'catalog']
+2025-08-30 22:07:30,920 [INFO] SFTP: auto remote dir = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21/catalog (remapped from AWS full path)
+2025-08-30 22:07:31,105 [ERROR] SFTP test failed: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 94, in makedirs
+    self._sftp.stat(path)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 493, in stat
+    t, msg = self._request(CMD_STAT, path)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\qt_main.py", line 349, in _test_sftp
+    client.makedirs(auto_dir)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 97, in makedirs
+    self._sftp.mkdir(path)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 460, in mkdir
+    self._request(CMD_MKDIR, path, attr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 22:07:36,670 [INFO] Watcher: checking Drive for new files...
+2025-08-30 22:07:38,890 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 22:07:38,896 [INFO] Downloading 'Haj_518559.csv' (id=1HzEs5js2jmqR_HPyyj7Jrf0oMxhQ3L6V, mime=text/csv) -> c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 22:07:39,807 [INFO] Downloaded 'Haj_518559.csv' -> c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 22:07:39,809 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 22:07:39,933 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 22:07:40,448 [INFO] Authentication (password) successful!
+2025-08-30 22:07:40,819 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 22:07:40,821 [INFO] SFTP: connected.
+2025-08-30 22:07:40,873 [INFO] SFTP: uploading c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv -> /upload/Haj_518559.csv
+2025-08-30 22:07:41,548 [ERROR] Upload failed for Haj_518559.csv: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 137, in run_once
+    sftp.upload(local_path, remote_dir=remote_dir)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 64, in upload
+    self._sftp.put(local_path, remote_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 759, in put
+    return self.putfo(fl, remotepath, file_size, callback, confirm)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 714, in putfo
+    with self.file(remotepath, "wb") as fr:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 372, in open
+    t, msg = self._request(CMD_OPEN, filename, imode, attrblock)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 22:07:41,592 [INFO] [chan 0] sftp session closed.
+2025-08-30 22:07:41,612 [INFO] SFTP: disconnected.
+2025-08-30 22:07:41,622 [INFO] [UI] Single run finished.
+2025-08-30 22:07:50,258 [INFO] [UI] Watcher started.
+2025-08-30 22:07:50,424 [INFO] [UI] status: connecting
+2025-08-30 22:07:50,458 [INFO] Watcher: loop started.
+2025-08-30 22:07:50,459 [INFO] Watcher: checking Drive for new files...
+2025-08-30 22:07:50,477 [INFO] [UI] status: watching
+2025-08-30 22:07:52,814 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 22:07:52,824 [INFO] Downloading 'Haj_518559.csv' (id=1HzEs5js2jmqR_HPyyj7Jrf0oMxhQ3L6V, mime=text/csv) -> c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 22:07:54,146 [INFO] Downloaded 'Haj_518559.csv' -> c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 22:07:54,155 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 22:07:54,332 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 22:07:54,962 [INFO] Authentication (password) successful!
+2025-08-30 22:07:55,323 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 22:07:55,332 [INFO] SFTP: connected.
+2025-08-30 22:07:55,389 [INFO] SFTP: uploading c:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv -> /upload/Haj_518559.csv
+2025-08-30 22:07:56,090 [ERROR] Upload failed for Haj_518559.csv: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 137, in run_once
+    sftp.upload(local_path, remote_dir=remote_dir)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 64, in upload
+    self._sftp.put(local_path, remote_path)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 759, in put
+    return self.putfo(fl, remotepath, file_size, callback, confirm)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 714, in putfo
+    with self.file(remotepath, "wb") as fr:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 372, in open
+    t, msg = self._request(CMD_OPEN, filename, imode, attrblock)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 22:07:56,155 [INFO] [chan 0] sftp session closed.
+2025-08-30 22:07:56,189 [INFO] SFTP: disconnected.
+2025-08-30 22:07:57,301 [INFO] [UI] Stop requested.
+2025-08-30 22:07:58,199 [INFO] Watcher: stop requested. exiting loop.
+2025-08-30 22:07:58,201 [INFO] Watcher: loop stopped.
+2025-08-30 22:21:41,892 [INFO] [UI] Profile 'hamo' loaded.
+2025-08-30 22:21:45,643 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 22:21:46,938 [INFO] [UI] Drive test OK. Items in folder: 1
+2025-08-30 22:21:50,281 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 22:21:50,585 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 22:21:51,477 [INFO] Authentication (password) successful!
+2025-08-30 22:21:51,836 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 22:21:51,897 [INFO] SFTP: connected.
+2025-08-30 22:21:51,902 [INFO] SFTP: home = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21
+2025-08-30 22:21:52,202 [INFO] SFTP: home listing = ['assortment', 'promotions', 'catalog']
+2025-08-30 22:21:52,208 [INFO] SFTP: auto remote dir = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21/catalog (remapped from AWS full path)
+2025-08-30 22:21:52,398 [ERROR] SFTP test failed: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 94, in makedirs
+    self._sftp.stat(path)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 493, in stat
+    t, msg = self._request(CMD_STAT, path)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\SigmaDesktop\qt_main.py", line 338, in _test_sftp
+    client.makedirs(auto_dir)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 97, in makedirs
+    self._sftp.mkdir(path)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 460, in mkdir
+    self._request(CMD_MKDIR, path, attr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 22:22:08,561 [INFO] [UI] Watcher started.
+2025-08-30 22:22:08,643 [INFO] [UI] status: connecting
+2025-08-30 22:22:08,656 [INFO] Watcher: loop started.
+2025-08-30 22:22:08,656 [INFO] [UI] status: watching
+2025-08-30 22:22:08,657 [INFO] Watcher: checking Drive for new files...
+2025-08-30 22:22:10,549 [INFO] [UI] Stop requested.
+2025-08-30 22:22:11,036 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 22:22:11,042 [INFO] Downloading 'Haj_518559.csv' (id=1HzEs5js2jmqR_HPyyj7Jrf0oMxhQ3L6V, mime=text/csv) -> C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 22:22:12,373 [INFO] Downloaded 'Haj_518559.csv' -> C:\Users\hp\Desktop\SigmaDesktop\temp_files\Haj_518559.csv
+2025-08-30 22:22:12,379 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 22:22:12,534 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 22:22:13,390 [INFO] Authentication (password) successful!
+2025-08-30 22:22:13,777 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 22:22:13,834 [INFO] SFTP: connected.
+2025-08-30 22:22:13,836 [INFO] SFTP: home = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21
+2025-08-30 22:22:14,154 [INFO] SFTP: home listing = ['assortment', 'promotions', 'catalog']
+2025-08-30 22:22:14,157 [INFO] SFTP: auto remote dir = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21/catalog (remapped from AWS full path)
+2025-08-30 22:22:14,347 [ERROR] Upload failed for Haj_518559.csv: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 94, in makedirs
+    self._sftp.stat(path)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 493, in stat
+    t, msg = self._request(CMD_STAT, path)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\watcher.py", line 84, in run_once
+    sftp.upload_to_auto_dir(local_path)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 111, in upload_to_auto_dir
+    self.makedirs(tdir)
+    ~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 97, in makedirs
+    self._sftp.mkdir(path)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 460, in mkdir
+    self._request(CMD_MKDIR, path, attr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 22:22:14,456 [INFO] [chan 0] sftp session closed.
+2025-08-30 22:22:14,469 [INFO] SFTP: disconnected.
+2025-08-30 22:22:14,471 [INFO] Watcher: stop requested. exiting loop.
+2025-08-30 22:22:14,473 [INFO] Watcher: loop stopped.
+2025-08-30 22:29:42,176 [INFO] [UI] Profile 'hamo' loaded.
+2025-08-30 22:29:45,310 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 22:29:46,559 [INFO] [UI] Drive test OK. Items in folder: 1
+2025-08-30 22:29:49,766 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 22:29:50,023 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 22:29:50,739 [INFO] Authentication (password) successful!
+2025-08-30 22:29:51,100 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 22:29:51,154 [INFO] SFTP: connected.
+2025-08-30 22:29:51,155 [INFO] SFTP: home = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21
+2025-08-30 22:29:51,443 [INFO] SFTP: home listing = ['assortment', 'promotions', 'catalog']
+2025-08-30 22:29:51,444 [INFO] SFTP: auto remote dir = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21/catalog (remapped from AWS full path)
+2025-08-30 22:29:51,614 [ERROR] SFTP test failed: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 94, in makedirs
+    self._sftp.stat(path)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 493, in stat
+    t, msg = self._request(CMD_STAT, path)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\qt_main.py", line 343, in _test_sftp
+    client.makedirs(auto_dir)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 97, in makedirs
+    self._sftp.mkdir(path)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 460, in mkdir
+    self._request(CMD_MKDIR, path, attr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+2025-08-30 22:37:20,065 [INFO] [UI] Profile 'hamo' loaded.
+2025-08-30 22:37:22,691 [INFO] [UI] Testing Drive auth/list ...
+2025-08-30 22:37:24,797 [INFO] Found 1 file(s) in folder 18Tp8aFq_Im3S42MtRaedHCIyBFvc_fai
+2025-08-30 22:37:24,802 [INFO] [UI] Drive list OK. Items in folder: 1
+2025-08-30 22:37:30,289 [INFO] [UI] Testing SFTP connection ...
+2025-08-30 22:37:30,292 [INFO] SFTP: connecting to vendor-automation-sftp-live-me.prod.aws.qcommerce.live:22 as HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21 ...
+2025-08-30 22:37:30,536 [INFO] Connected (version 2.0, client AWS_SFTP_1.2)
+2025-08-30 22:37:31,264 [INFO] Authentication (password) successful!
+2025-08-30 22:37:31,609 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-08-30 22:37:31,665 [INFO] SFTP: connected.
+2025-08-30 22:37:31,667 [INFO] SFTP: home = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21
+2025-08-30 22:37:31,997 [INFO] SFTP: home listing = ['assortment', 'promotions', 'catalog']
+2025-08-30 22:37:32,002 [INFO] SFTP: auto remote dir = /vendor-automation-sftp-storage-live-me-1/home/HF_EG_0a87d7e7-1fc5-4b74-897a-d416fcf4bb21/catalog (remapped from AWS full path)
+2025-08-30 22:37:32,170 [ERROR] [UI] SFTP test failed: [Errno 13] Access denied
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 94, in makedirs
+    self._sftp.stat(path)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 493, in stat
+    t, msg = self._request(CMD_STAT, path)
+             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\hp\Desktop\SigmaDesktop\qt_main.py", line 392, in _test_sftp
+    client.makedirs(auto_dir)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\hp\Desktop\SigmaDesktop\modules\sftp_handler.py", line 97, in makedirs
+    self._sftp.mkdir(path)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 460, in mkdir
+    self._request(CMD_MKDIR, path, attr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 857, in _request
+    return self._read_response(num)
+           ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 909, in _read_response
+    self._convert_status(msg)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python313\Lib\site-packages\paramiko\sftp_client.py", line 940, in _convert_status
+    raise IOError(errno.EACCES, text)
+PermissionError: [Errno 13] Access denied
