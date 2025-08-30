@@ -1,6 +1,11 @@
 # modules/watcher.py
 """
-Watcher module (Qt Edition)
+Watcher module (Qt Edition).
+
+Receives runtime SFTP configuration from the UI so connection
+details can be provided at launch instead of relying solely on
+static settings.
+
 - Drive: list & download to local temp
 - SFTP: upload to auto path based on username
 - Drive: move to Archive on success
