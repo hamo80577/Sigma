@@ -1,5 +1,4 @@
 # ui/animations.py
-import threading
 
 class Blinker:
     """

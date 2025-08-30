@@ -14,9 +14,6 @@ from config.logger import logger
 
 from .animations import Blinker
 
-LOGGER = logging.getLogger("SigmaApp")
-LOGGER.setLevel(logging.INFO)
-
 
 class TextHandler(logging.Handler):
     """Logging handler that writes into a Tkinter Text widget (thread-safe via after)."""
@@ -65,8 +62,8 @@ class MainUI(tk.Tk):
         self._build_ui()
         # wire logger -> text widget
         self.text_handler = TextHandler(self.log_text)
-        logging.getLogger().addHandler(self.text_handler)
-        logging.getLogger().setLevel(logging.INFO)
+        logger.addHandler(self.text_handler)
+        logger.setLevel(logging.INFO)
 
     def _build_ui(self):
         pad = 8
@@ -150,20 +147,18 @@ class MainUI(tk.Tk):
             return
 
         self.set_conn_state("testing")
+
         def _do_test():
             try:
                 s = sftp_handler.SFTPHandler(host=host, port=port, username=user, password=pwd, key_file=key)
-                ok = s.connect()
-                if ok:
-                    LOGGER.info("[UI] SFTP test connection OK")
-                    s.disconnect()
-                    self.set_conn_state("ok")
-                else:
-                    LOGGER.error("[UI] SFTP test failed")
-                    self.set_conn_state("failed")
+                s.connect()
+                logger.info("[UI] SFTP test connection OK")
+                s.close()
+                self.set_conn_state("ok")
             except Exception as e:
-                LOGGER.exception("SFTP test error: %s", e)
+                logger.exception("SFTP test error: %s", e)
                 self.set_conn_state("failed")
+
         threading.Thread(target=_do_test, daemon=True).start()
 
     def set_conn_state(self, state):
@@ -187,22 +182,22 @@ class MainUI(tk.Tk):
     def run_once(self):
         """Run watcher.run_once synchronously (single cycle)."""
         try:
-            LOGGER.info("[UI] Running single watcher cycle...")
+            logger.info("[UI] Running single watcher cycle...")
             # prepare service object using selected SA path
             sa = self.service_account_path.get().strip() or None
             try:
                 svc = drive_handler.get_drive_service(service_account_file=sa) if sa else drive_handler.get_drive_service()
             except Exception as e:
-                LOGGER.exception("Drive auth failed: %s", e)
+                logger.exception("Drive auth failed: %s", e)
                 messagebox.showerror("Drive auth", f"Failed to authenticate to Drive: {e}")
                 return
 
             w = watcher_module.Watcher()
             w.drive_service = svc  # override service object
             w.run_once()
-            LOGGER.info("[UI] Single run finished.")
+            logger.info("[UI] Single run finished.")
         except Exception as e:
-            LOGGER.exception("Run once failed: %s", e)
+            logger.exception("Run once failed: %s", e)
 
     def start_watcher(self):
         if self.watcher_thread and self.watcher_thread.is_alive():
@@ -214,7 +209,7 @@ class MainUI(tk.Tk):
         try:
             svc = drive_handler.get_drive_service(service_account_file=sa) if sa else drive_handler.get_drive_service()
         except Exception as e:
-            LOGGER.exception("Drive auth failed: %s", e)
+            logger.exception("Drive auth failed: %s", e)
             messagebox.showerror("Drive auth", f"Failed to authenticate to Drive: {e}")
             return
 
@@ -224,7 +219,7 @@ class MainUI(tk.Tk):
         self.stop_event = threading.Event()
 
         def _loop():
-            LOGGER.info("[UI] Watcher background thread started.")
+            logger.info("[UI] Watcher background thread started.")
             # signal UI connected state
             self.set_conn_state("ok")
             poll = getattr(settings, "POLL_INTERVAL", 30)
@@ -232,13 +227,13 @@ class MainUI(tk.Tk):
                 try:
                     self.bg_watcher.run_once()
                 except Exception:
-                    LOGGER.exception("Background watcher run_once error")
+                    logger.exception("Background watcher run_once error")
                 # sleep in small steps so we can stop quickly
                 for _ in range(max(1, int(poll))):
                     if self.stop_event.is_set():
                         break
                     time.sleep(1)
-            LOGGER.info("[UI] Watcher background thread stopping.")
+            logger.info("[UI] Watcher background thread stopping.")
             self.set_conn_state("idle")
 
         self.watcher_thread = threading.Thread(target=_loop, daemon=True)
@@ -251,7 +246,7 @@ class MainUI(tk.Tk):
             self.stop_event.set()
         self.start_btn.config(state="normal")
         self.stop_btn.config(state="disabled")
-        LOGGER.info("[UI] Stop signal sent to watcher thread.")
+        logger.info("[UI] Stop signal sent to watcher thread.")
 
     def open_latest_log(self):
         # try to open today's log file created by config/logger.py
@@ -275,7 +270,7 @@ class MainUI(tk.Tk):
             except Exception:
                 messagebox.showinfo("Log path", f"Log file: {path}")
         except Exception as e:
-            LOGGER.exception("Failed to open log: %s", e)
+            logger.exception("Failed to open log: %s", e)
 
 
 if __name__ == "__main__":
